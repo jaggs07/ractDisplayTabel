@@ -7,15 +7,6 @@ import "./styles.css";
 
 class SearchHome extends Component {
 
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            loading: true,
-        }
-    }
-
     render() {
             return (
            		<div>
@@ -23,7 +14,9 @@ class SearchHome extends Component {
     	            <NavBar />
                     <Form />
     	            <div className="container" >
-                        <Table />
+                        <Table
+                            greenhouseClientData={this.props.data}
+                        />
                     </div>
 
             	</div>

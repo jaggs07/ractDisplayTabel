@@ -3,19 +3,19 @@ import {
 	fetchData
 } from "../actions/dataActions";
 
-import Table from "../components/Table/index";
+import SearchHome from "../scenes/SearchHome/index";
 
 
 const mapStateToProps = (state) => {
 	return {
 
-		data: state.dataReducer.job,
+		data: state.dataReducer.greenhouseClient,
 	};
 };
 
 const mapDispatchToProps = (dispatch, props) => {
 
-    
+
     dispatch(fetchData())
 	return {
         fetchData: () => {
@@ -24,7 +24,7 @@ const mapDispatchToProps = (dispatch, props) => {
 	};
 };
 
-const SearchHomeContainer = connect(mapStateToProps, mapDispatchToProps)(Table)
+const SearchHomeContainer = connect(mapStateToProps, mapDispatchToProps)(SearchHome)
 
 export default SearchHomeContainer
 

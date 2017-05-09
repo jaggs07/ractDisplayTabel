@@ -4,14 +4,14 @@ import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory , IndexRoute} from "react-router";
 import store from "./store";
 
-import SearchHomeContainer from './scences/SearchHome/index';
+import SearchHome from "./containers/SearchHome";
 
 ReactDOM.render(
     <Provider store={store}>
         <Router history={browserHistory}>
             <Route path="/" >
-                <Route path="client-list" component={SearchHomeContainer} />
-                <IndexRoute component={SearchHomeContainer} />
+                <Route path="client-list" component={SearchHome} />
+                <IndexRoute component={SearchHome} />
             </Route>
         </Router>
     </Provider>
